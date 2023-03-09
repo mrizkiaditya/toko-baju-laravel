@@ -1,5 +1,10 @@
 @extends('layouts.main')
 
 @section('container')
-<h1>Ini About</h1>
+<div class="about">
+    <h1 class="text-center">Tentang kami</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eius neque? Consequatur soluta mollitia aliquid, eveniet atque, nobis pariatur debitis perferendis animi necessitatibus ratione unde magni delectus. Ab, minima fugiat, eligendi nesciunt cupiditate modi porro omnis officia sequi incidunt iusto excepturi, id ea ullam sed voluptatem quasi iste quas doloribus. Sit qui iusto nesciunt? Praesentium quasi ut tempora, ea nisi quos fugit incidunt explicabo optio in ipsa soluta. Laborum dicta obcaecati iusto illum non beatae exercitationem quae nobis culpa minus magni mollitia temporibus, aut aliquam aliquid maiores enim eos magnam voluptatibus vitae modi dolorem? Et consequuntur debitis iure inventore adipisci.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus repudiandae tempora nostrum magni eius placeat, soluta consectetur similique ab labore facilis excepturi assumenda eveniet tempore itaque illo eaque reiciendis provident quos ipsam repellendus quisquam veniam autem! Numquam voluptates ea a illo pariatur velit, accusamus reiciendis nulla quod, consequuntur omnis assumenda tempora ut. Quibusdam corporis reiciendis dolore voluptatibus sunt cum totam quas aliquam maiores? Dolorem autem temporibus accusantium saepe, iure incidunt cum esse praesentium sapiente. Iure animi sint quibusdam facere libero iusto, magnam officiis nihil rem neque, veritatis illum, enim et adipisci consectetur quas cumque repudiandae voluptatum porro maiores quam necessitatibus?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus quisquam hic assumenda. Veniam, fugiat reprehenderit eius earum optio voluptatum voluptate iusto, in quia tempora quos saepe facilis atque nostrum officiis eos! Exercitationem, laboriosam odit iusto inventore expedita cupiditate consequuntur incidunt, fugit vel sint quas modi ab doloremque numquam itaque nisi?</p>
+</div>
 @endsection

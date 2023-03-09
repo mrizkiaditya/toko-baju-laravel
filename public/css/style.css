@@ -14,11 +14,47 @@ body {
     color: rgb(200, 7, 7);
 }
 
-.button-search {
+.button-login {
     background-color: rgb(200, 7, 7);
-    border: none;
+    border: 1px rgb(200, 7, 7) solid;
     color: white;
-    padding: 15px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+.button-login:hover {
+    background-color: rgb(147, 5, 5);
+    border: 1px rgb(147, 5, 5) solid;
+}
+
+.button-modal-login {
+    background-color: rgb(200, 7, 7);
+    border: 1px rgb(200, 7, 7) solid;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    /* margin: auto; */
+    width: 49%;
+}
+
+.button-modal-login:hover {
+    background-color: rgb(147, 5, 5);
+}
+
+.button-signup {
+    border: 1px rgb(200, 7, 7) solid;
+    color: rgb(200, 7, 7);
+    background-color: #fff;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -26,8 +62,31 @@ body {
     border-radius: 12px;
 }
 
-.button-search:hover {
-    background-color: rgb(147, 5, 5);
+.button-signup:hover {
+    background-color: #f4f4f4;
+}
+
+.button-modal-signup {
+    border: 1px rgb(200, 7, 7) solid;
+    color: rgb(200, 7, 7);
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    /* margin: auto; */
+    width: 49%;
+}
+
+.button-modal-signup:hover {
+    background-color: #f4f4f4;
+}
+
+.home {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 
 .carousel-item {
@@ -39,23 +98,115 @@ body {
     border-radius: 20px;
 }
 
+.text-card a {
+    background-color: rgb(200, 7, 7);
+}
+
+.text-card a:hover {
+    background-color: rgb(147, 5, 5);
+}
+
+.title p {
+    color: rgb(200, 7, 7);
+    border: 1px rgb(200, 7, 7) solid;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.title p:hover {
+    background-color: rgb(200, 7, 7);
+    color: white;
+}
+
+.posts .card {
+    width: 15rem;
+}
+
 .posts .card .card-img-top {
     height: 300px;
+    width: 100%;
     object-fit: cover;
 }
 
-.posts .card-body .card-text {
+/* .posts .card-body .card-text {
     font-size: 18px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
+} */
 
 @media screen and (max-width: 1000px) {
 	.carousel-item {
         height: auto;
     }
-    .card-img-top {
+}
+
+@media screen and (max-width: 1399px) and (min-width: 1200px ) {
+    .posts .card {
+        width: 17rem;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 990px ) {
+    .posts .card {
+        width: 22rem;
+    }
+}
+
+@media screen and (max-width: 990px) and (min-width: 766px ) {
+    .posts .card {
+        width: 16rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .posts .card {
         width: auto;
     }
+    .posts .title {
+        margin-bottom: 10px;
+    }
+    .posts .title p {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.title p:hover {
+    background-color: rgb(200, 7, 7);
+    color: white;
+}
+
+footer {
+    background-color: rgb(200, 7, 7);
+    color: white;
+    height: 80px;
+}
+
+footer .text {
+    margin-bottom: -1px;
+    margin-top: -5px;
+}
+
+.about {
+    margin: 150px 0;
+}
+
+.about h1 {
+    margin-bottom: 40px;
+}
+
+.about p {
+    text-indent: 45px;
+    text-align: justify;
+}
+
+.category {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 }
