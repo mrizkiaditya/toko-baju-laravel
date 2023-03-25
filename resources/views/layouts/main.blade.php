@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>tokobaju</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -40,7 +40,7 @@
                     <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
                     <!-- <button class="button-search" type="submit">Search</button> -->
                 </form>
-                <button class="button-signup" type="button">Daftar</button>
+                <a href="/signup"><button class="button-signup" type="button">Daftar</button></a>
                 <button class="button-login" type="button" data-bs-toggle="modal" data-bs-target="#modalLogin">Masuk</button>
             </div>
         </div>
@@ -87,7 +87,7 @@
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
                         <button type="submit" class="button-modal-login">Masuk</button>
-                        <button type="button" class="button-modal-signup">Daftar</button>
+                        <a href="/signup"><button type="button" class="button-modal-signup">Daftar</button></a>
                     </form>
                 </div>
             </div>

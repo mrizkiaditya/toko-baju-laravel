@@ -11,16 +11,19 @@
 
         <div class="row d-flex justify-content-center">
 
+        @foreach($baju as $row)
             <div class="col-md mb-3">
                 <div class="card shadow">
-                    <img class="card-img-top" src="img/pria/pria1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="{{ $row->gambar }}" alt="Card image cap">
                     <div class="text-card card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">{{ $row->nama }}</h5>
+                        <p class="card-text">{{ $row->deskripsi }}</p>
                         <a href="#" class="btn btn-dark">Lihat lebih</a>
                     </div>
                 </div>
             </div>
+        @endforeach
+
             <div class="col-md mb-3">
                 <div class="card shadow">
                     <img class="card-img-top" src="img/pria/pria2.jpg" alt="Card image cap">
