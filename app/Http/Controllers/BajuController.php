@@ -13,20 +13,24 @@ class BajuController extends Controller
         $baju = Baju::all();
         return view('users.home', compact(['baju']));
     }
+
     public function category()
     {
         $baju = Baju::all();
         return view('users.category', compact(['baju']));
     }
+
     public function index_baju()
     {
         $baju = Baju::all();
         return view('admin.baju.index', compact(['baju']));
     }
+
     public function create()
     {
         return view('admin.baju.create');
     }
+
     public function store(Request $request)
     {
         // dd($request->except(['_token', 'submit']));
@@ -45,12 +49,14 @@ class BajuController extends Controller
         ]);
         return redirect('/admin/baju');
     }
+
     public function edit($id)
     {
         $baju = Baju::find($id);
         // dd($baju);
         return view('admin.baju.edit', compact(['baju']));
     }
+
     public function update($id, Request $request)
     {
         $baju = baju::find($id);
@@ -72,6 +78,7 @@ class BajuController extends Controller
         ]);
         return redirect('/admin/baju');
     }
+    
     public function destroy($id)
     {
         $baju = baju::find($id);

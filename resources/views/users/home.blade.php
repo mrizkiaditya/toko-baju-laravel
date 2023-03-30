@@ -13,9 +13,11 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner shadow">
+                @foreach($promo as $row)
                 <div class="carousel-item active">
-                    <img src="img/www.jpg" class="d-block w-100" alt="...">
+                    <img src="{{ $row->gambar }}" class="d-block w-100" alt="...">
                 </div>
+                @endforeach
                 <div class="carousel-item">
                     <img src="img/www.jpg" class="d-block w-100" alt="...">
                 </div>

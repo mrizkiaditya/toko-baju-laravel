@@ -66,7 +66,7 @@
     background-color: #f4f4f4;
 }
 
-.button-modal-signup {
+.signup .button-modal-signup {
     border: 1px rgb(200, 7, 7) solid;
     color: rgb(200, 7, 7);
     background-color: #fff;
@@ -80,7 +80,7 @@
     width: 49%;
 }
 
-.button-modal-signup:hover {
+.signup .button-modal-signup:hover {
     background-color: #f4f4f4;
 }
 

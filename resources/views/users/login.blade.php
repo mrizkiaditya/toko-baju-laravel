@@ -12,23 +12,30 @@
 <body class="signup">
     <div>
         <div class="container">
-            <h3 class="text-center mb-3 mt-5 pt-5">Daftar disini!</h3>
+
+            @if(session()->has('success'))
+            <div class="d-flex justify-content-center">
+                <div class="col-6 alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>{{ session('success') }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+            @endif
+
+            <h3 class="text-center mb-3 mt-5 pt-5">Masuk disini!</h3>
             <div class="d-flex justify-content-center">
                 <div class="daftar shadow d-flex align-items-center justify-content-center">
                     <form>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword2" class="form-label">Ulang Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword2">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Daftar</button>
+                        <button type="submit" class="button-modal-login">Masuk</button>
+                        <a href="/register"><button type="button" class="button-modal-signup">Daftar</button></a>
                         <div class="mt-4 text-center" style="color: rgb(200, 7, 7);">
                             by <a class="navbar-brand" href="/"><strong>tokobaju</strong></a>
                         </div>
