@@ -3,8 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BajuController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PromoController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginAdminController;
+use App\Http\Controllers\RegisterAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,32 +20,40 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
+//Halaman home
 Route::get('/',  [HomeController::class, 'index']);
 
-Route::get('/category', [BajuController::class, 'category']);
-
+// Halaman About
 Route::get('/about', function () {
     return view('users/about');
 });
 
-Route::get('/login', function () {
-    return view('users/login');
-});
+//halaman baju
+Route::get('/baju/{id}', [BajuController::class, 'show']);
+Route::get('/baju-pria', [BajuController::class, 'pria']);
+Route::get('/baju-wanita', [BajuController::class, 'wanita']);
 
-// Register
-Route::get('/register', [RegisterController::class, 'index']);
+// login user
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+// Register user
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/login-admin', function () {
-    return view('admin/loginadmin');
-});
+// login admin
+Route::get('/login-admin', [LoginAdminController::class, 'index']);
+Route::post('/login-admin', [LoginAdminController::class, 'authenticate']);
+Route::post('/logout-admin', [LoginAdminController::class, 'logout']);
 
-Route::get('/signup-admin', function () {
-    return view('admin/signupadmin');
-});
+//register admin
+Route::get('/register-admin', [RegisterAdminController::class, 'index']);
+Route::post('/register-admin', [RegisterAdminController::class, 'store']);
 
+// Dashboard admin
 Route::get('/admin', function () {
-    return view('admin/dashboard');
+    return view('/admin/dashboard');
 });
 
 // CRUD BAJU
@@ -55,4 +66,3 @@ Route::delete('/admin/baju/{id}', [BajuController::class, 'destroy']);
 
 //CRUD PROMO
 Route::resource('/admin/promo', PromoController::class);
-

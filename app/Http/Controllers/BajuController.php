@@ -8,16 +8,22 @@ use Illuminate\Support\Facades\File;
 
 class BajuController extends Controller
 {
-    public function index()
-    {
-        $baju = Baju::all();
-        return view('users.home', compact(['baju']));
-    }
+    // public function index()
+    // {
+    //     $baju = Baju::all();
+    //     return view('users.home', compact(['baju']));
+    // }
 
-    public function category()
+    // public function category()
+    // {
+    //     $baju = Baju::all();
+    //     return view('users.category', compact(['baju']));
+    // }
+
+    public function show($id)
     {
-        $baju = Baju::all();
-        return view('users.category', compact(['baju']));
+        $baju = Baju::find($id);
+        return view('users.baju', compact(['baju']));
     }
 
     public function index_baju()
@@ -84,5 +90,17 @@ class BajuController extends Controller
         $baju = baju::find($id);
         $baju->delete();
         return redirect('/admin/baju');
+    }
+
+    public function pria()
+    {
+        $baju = Baju::where('jenis_baju', '=', 'baju pria')->inRandomOrder()->get();
+        return view('users.bajupria', compact(['baju']));
+    }
+
+    public function wanita()
+    {
+        $baju = Baju::where('jenis_baju', '=', 'baju wanita')->inRandomOrder()->get();
+        return view('users.bajuwanita', compact(['baju']));
     }
 }

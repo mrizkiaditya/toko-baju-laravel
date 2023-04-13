@@ -22,17 +22,32 @@
             </div>
             @endif
 
+            @if(session()->has('loginError'))
+            <div class="d-flex justify-content-center">
+                <div class="col-6 alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{ session('loginError') }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+            @endif
+
             <h3 class="text-center mb-3 mt-5 pt-5">Masuk disini!</h3>
             <div class="d-flex justify-content-center">
                 <div class="daftar shadow d-flex align-items-center justify-content-center">
-                    <form>
+                    <form action="/login" method="POST">
+                        @csrf
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" autofocus required value="{{ old('email') }}">
+                            @error('email')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                            @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
                         </div>
                         <button type="submit" class="button-modal-login">Masuk</button>
                         <a href="/register"><button type="button" class="button-modal-signup">Daftar</button></a>

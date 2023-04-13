@@ -14,6 +14,26 @@
     color: rgb(200, 7, 7);
 }
 
+.navbar .cart {
+    margin-right: 10px;
+}
+
+.navbar .cart a {
+    color: #444;
+}
+
+.navbar .user a {
+    color: #444;
+}
+
+.navbar .cart a:hover {
+    color: rgb(200, 7, 7);
+}
+
+.navbar .user a:hover {
+    color: rgb(200, 7, 7);
+}
+
 .button-login {
     background-color: rgb(200, 7, 7);
     border: 1px rgb(200, 7, 7) solid;
@@ -209,6 +229,29 @@ footer .text {
 .category {
     margin-top: 5rem;
     margin-bottom: 2rem;
+}
+
+.baju {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.baju .title {
+    margin-bottom: 2rem;
+}
+
+.baju .title h2 {
+    font-weight: 700;
+    font-size: 32pt;
+}
+
+.baju .gambar img {
+    height: 300px;
+    width: auto;
+}
+
+.baju .deskripsi p {
+    font-size: 20pt;
 }
 
 .signup {

@@ -11,7 +11,9 @@ class HomeController extends Controller
     public function index()
     {
         return view('users.home', [
-            'baju' => Baju::all(),
+            'pria'=> Baju::where('jenis_baju', '=', 'baju pria')->inRandomOrder()->get(),
+            'wanita'=> Baju::where('jenis_baju', '=', 'baju wanita')->inRandomOrder()->get(),
+            // 'baju' => Baju::all(),
             'promo' => Promo::all()
         ]);
     }

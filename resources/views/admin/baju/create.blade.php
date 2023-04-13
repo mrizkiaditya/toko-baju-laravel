@@ -14,11 +14,21 @@
             @csrf
             <div class="form-group mb-3">
                 <label for="exampleFormControlInput1">Nama Baju</label>
-                <input type="text" name="nama" class="form-control" id="exampleFormControlInput1" placeholder="Baju dari tokobaju">
+                <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Baju dari tokobaju" required autofocus value="{{ old('nama') }}">
+                @error('nama')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
             <div class="form-group mb-3">
                 <label for="exampleFormControlTextarea1">Deskripsi Baju</label>
-                <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control @error('deskripsi') is-invalid @enderror" name="deskripsi" id="exampleFormControlTextarea1" rows="3" required value="{{ old('deskripsi') }}"></textarea>
+                @error('deskripsi')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
             <div class="form-group mb-3">
                 <label for="exampleFormControlTextarea1">Gambar Baju</label>

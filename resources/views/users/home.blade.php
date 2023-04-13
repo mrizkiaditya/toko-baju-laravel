@@ -15,15 +15,9 @@
             <div class="carousel-inner shadow">
                 @foreach($promo as $row)
                 <div class="carousel-item active">
-                    <img src="{{ $row->gambar }}" class="d-block w-100" alt="...">
+                    <img src="{{ $row->gambar }}" class="d-block w-100" alt="promo tokobaju">
                 </div>
                 @endforeach
-                <div class="carousel-item">
-                    <img src="img/www.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/www.jpg" class="d-block w-100" alt="...">
-                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -45,55 +39,23 @@
                 <h2>Baju Pria</h2>
             </div>
             <div class="col-md-4 d-flex flex-row-reverse">
-                <p>Lihat semua product</p>
+                <a href="/baju-pria"><p>Lihat semua product</p></a>
             </div>
         </div>
 
         <div class="row d-flex justify-content-center">
 
-            @foreach($baju as $row)
+            @foreach($pria->slice(0, 4) as $row)
             <div class="col-md mb-3">
                 <div class="card shadow">
                     <img class="card-img-top" src="{{ $row->gambar }}" alt="Card image cap">
                     <div class="text-card card-body">
                         <h5 class="card-title">{{ $row->nama }}</h5>
-                        <p class="card-text">{{ $row->deskripsi }}</p>
-                        <a href="#" class="btn btn-dark">Lihat lebih</a>
+                        <a href="/baju/{{ $row->id }}" class="btn btn-dark">Lihat lebih</a>
                     </div>
                 </div>
             </div>
             @endforeach
-
-            <div class="col-md mb-3">
-                <div class="card shadow">
-                    <img class="card-img-top" src="img/pria/pria2.jpg" alt="Card image cap">
-                    <div class="text-card card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-dark">Lihat lebih</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md mb-3">
-                <div class="card shadow">
-                    <img class="card-img-top" src="img/pria/pria3.jfif" alt="Card image cap">
-                    <div class="text-card card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-dark">Lihat lebih</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md mb-3">
-                <div class="card shadow">
-                    <img class="card-img-top" src="img/pria/pria4.jpg" alt="Card image cap">
-                    <div class="text-card card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-dark">Lihat lebih</a>
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>
@@ -106,52 +68,23 @@
                 <h2>Baju wanita</h2>
             </div>
             <div class="col-md-4 d-flex flex-row-reverse">
-                <p>Lihat semua product</p>
+                <a href="/baju-wanita"><p>Lihat semua product</p></a>
             </div>
         </div>
 
         <div class="row d-flex justify-content-center">
 
+            @foreach($wanita->slice(0, 4) as $row)
             <div class="col-md mb-3">
                 <div class="card shadow">
-                    <img class="card-img-top" src="img/pria/pria1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="{{ $row->gambar }}" alt="Card image cap">
                     <div class="text-card card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-dark">Lihat lebih</a>
+                        <h5 class="card-title">{{ $row->nama }}</h5>
+                        <a href="/baju/{{ $row->id }}" class="btn btn-dark">Lihat lebih</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md mb-3">
-                <div class="card shadow">
-                    <img class="card-img-top" src="img/pria/pria2.jpg" alt="Card image cap">
-                    <div class="text-card card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-dark">Lihat lebih</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md mb-3">
-                <div class="card shadow">
-                    <img class="card-img-top" src="img/pria/pria3.jfif" alt="Card image cap">
-                    <div class="text-card card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-dark">Lihat lebih</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md mb-3">
-                <div class="card shadow">
-                    <img class="card-img-top" src="img/pria/pria4.jpg" alt="Card image cap">
-                    <div class="text-card card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-dark">Lihat lebih</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
 
         </div>
     </div>

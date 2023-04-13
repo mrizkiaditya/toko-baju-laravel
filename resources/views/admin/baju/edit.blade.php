@@ -15,11 +15,11 @@
             @csrf
             <div class="form-group mb-3">
                 <label for="exampleFormControlInput1">Nama Baju</label>
-                <input value="{{$baju->nama}}" type="text" name="nama" class="form-control" id="exampleFormControlInput1" placeholder="Baju dari tokobaju">
+                <input value="{{$baju->nama}}" type="text" name="nama" class="form-control" id="nama" placeholder="Baju dari tokobaju">
             </div>
             <div class="form-group mb-3">
                 <label for="exampleFormControlTextarea1">Deskripsi Baju</label>
-                <textarea class="form-control" name="deskripsi" id="exampleFormControlTextarea1" rows="3">{{$baju->deskripsi}}</textarea>
+                <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3">{{$baju->deskripsi}}</textarea>
             </div>
             <div class="form-group mb-3">
                 <label for="exampleFormControlTextarea1">Gambar Baju</label>
